@@ -42,9 +42,11 @@ spec:
           requests:  
             cpu: 100m
             memory: 200Mi
+            ephemeral-storage: "100Mi"
           limits:
             cpu: 200m
             memory: 400Mi
+            ephemeral-storage: "200Mi"
       - name: debugtool
         image: debugtool:0.1
         command: ["/bin/bash", "-c", "while true; do sleep 3600; done"]
@@ -52,9 +54,11 @@ spec:
           requests:
             cpu: 100m
             memory: 20Mi
+            ephemeral-storage: "100Mi"
           limits:
             cpu: 200m
             memory: 400Mi
+            ephemeral-storage: "200Mi"
         securityContext:
           capabilities:
               add:
